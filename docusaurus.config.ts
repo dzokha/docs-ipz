@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/dzokha/docs-ipz/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/dzokha/docs-ipz/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -75,7 +75,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'IPZ Docs',
+      title: 'IPZ Digital',
       logo: {
         alt: 'IPZ Digital Logo',
         src: 'img/ipz.png',
@@ -87,7 +87,7 @@ const config: Config = {
           position: 'left',
           label: 'Tài liệu',
         },
-        {to: '/blog', label: 'Tin tức', position: 'left'},
+        {to: '/blog', label: 'Sự kiện', position: 'left'},
         {
           href: 'https://ipz.vn',
           label: 'Trang chủ IPZ',
@@ -105,7 +105,7 @@ const config: Config = {
               label: 'Tài liệu',
               to: '/docs/intro',
             },
-            {to: '/blog', label: 'Tin tức'},
+            {to: '/blog', label: 'Sự kiện'},
           ],
         },
         {
@@ -129,7 +129,7 @@ const config: Config = {
           title: 'Liên hệ',
           items: [
             { label: 'IPZ Digital Solutions', href: 'https://ipz.vn' },
-            { label: 'Cái Nước, Cà Mau, Việt Nam'},
+            { label: 'Cái Nước, Cà Mau, Việt Nam', href: 'https://maps.app.goo.gl/kKMTGoRxBH1CLGbz9'},
             { label: 'Email: info@ipz.vn', href: 'mailto:info@ipz.vn' }, 
           ],
         },

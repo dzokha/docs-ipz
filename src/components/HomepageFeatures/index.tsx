@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Trải nghiệm Người dùng Tối ưu',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Cấu trúc được thiết kế tinh gọn và trực quan, giúp người dùng tiếp cận thông tin kỹ thuật một cách nhanh chóng và liền mạch.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Tập trung vào Giá trị Nội dung',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Chúng tôi tối ưu hóa quy trình quản lý tri thức, cho phép bạn dành trọn nguồn lực vào việc phát triển nội dung và giải pháp thay vì loay hoay với hạ tầng.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Nền tảng Công nghệ Tiên tiến',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Vận hành trên nền tảng React hiện đại, hỗ trợ khả năng tùy biến linh hoạt và sẵn sàng mở rộng quy mô hệ thống theo tốc độ tăng trưởng của sản phẩm.
       </>
     ),
   },

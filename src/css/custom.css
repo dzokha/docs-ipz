@@ -1,70 +1,79 @@
 /**
  * IPZ Digital Solutions - Global CSS
- * Tối ưu hóa cho giao diện Expert & Tinh gọn
+ * Tối ưu hóa cho giao diện Expert & Tinh gọn (Đã chỉnh sửa độ hài hòa)
  */
 
 :root {
-  /* Màu chủ đạo (Brand Green: #00d65f) dùng làm điểm nhấn (Accent) */
-  --ifm-color-primary: #00d65f;
-  --ifm-color-primary-dark: #00b852;
-  --ifm-color-primary-darker: #00a348;
-  --ifm-color-primary-darkest: #00873c;
-  --ifm-color-primary-light: #1ae876;
-  --ifm-color-primary-lighter: #33f086;
-  --ifm-color-primary-lightest: #66f8a8;
+  /* Màu chủ đạo (Brand Green) - Chỉnh dịu xuống một chút cho Light Mode */
+  --ifm-color-primary: #00c657; 
+  --ifm-color-primary-dark: #00aa4c;
+  --ifm-color-primary-darker: #009642;
+  --ifm-color-primary-darkest: #007a36;
+  --ifm-color-primary-light: #1ce06e;
+  --ifm-color-primary-lighter: #35f284;
+  --ifm-color-primary-lightest: #68f8a5;
   
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 214, 95, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 198, 87, 0.1);
   
   /* Font chữ mượt mà và hiện đại hơn */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+
+  /* Đồng bộ màu Footer cho Light Mode */
+  --ifm-footer-background-color: #f0f2f5; 
+  --ifm-footer-color: #4b5563; /* Màu chữ footer xám đậm */
+  --ifm-footer-link-color: #374151;
 }
 
-/* Chế độ Dark Mode (Sử dụng màu nền đen sâu #18181B cho độ tương phản cao, chuyên nghiệp) */
+/* Chế độ Dark Mode */
 [data-theme='dark'] {
-  --ifm-background-color: #18181B;
-  --ifm-navbar-background-color: #18181B;
-  --ifm-footer-background-color: #18181B;
+  --ifm-background-color: #121212; /* Màu đen chuẩn Material Design, dịu mắt hơn #18181B */
+  --ifm-navbar-background-color: #18181B; /* Navbar giữ màu tối hơn chút để phân lớp */
+  --ifm-footer-background-color: #18181B; /* Footer đồng màu với Navbar */
   
-  --ifm-color-primary: #00d65f;
-  --ifm-color-primary-dark: #00b852;
-  --ifm-color-primary-darker: #00a348;
-  --ifm-color-primary-darkest: #00873c;
-  --ifm-color-primary-light: #1ae876;
-  --ifm-color-primary-lighter: #33f086;
-  --ifm-color-primary-lightest: #66f8a8;
+  /* Trong Dark Mode, dùng màu xanh ngọc (Teal) pha chút lá cây để giảm chói */
+  --ifm-color-primary: #10b981; 
+  --ifm-color-primary-dark: #059669;
+  --ifm-color-primary-darker: #047857;
+  --ifm-color-primary-darkest: #065f46;
+  --ifm-color-primary-light: #34d399;
+  --ifm-color-primary-lighter: #6ee7b7;
+  --ifm-color-primary-lightest: #a7f3d0;
   
-  --docusaurus-highlighted-code-line-bg: rgba(0, 214, 95, 0.2);
+  --docusaurus-highlighted-code-line-bg: rgba(16, 185, 129, 0.2);
 }
 
-/* Tùy chỉnh Hero Section (Phần đầu trang chủ) để không bị xanh rực */
+/* Tùy chỉnh Hero Section (Phần đầu trang chủ) */
 .hero--primary {
-  background-color: #f8f9fa !important; /* Màu nền xám sáng thanh lịch cho Light Mode */
-  color: #18181B !important; /* Chữ màu tối */
-  border-bottom: 1px solid #eaeaea; /* Đường viền mờ tách biệt nội dung */
-}
-
-/* Hero Section khi ở chế độ Dark Mode */
-[data-theme='dark'] .hero--primary {
-  background-color: #18181B !important; /* Nền tối tệp với thân website */
-  color: #ffffff !important;
-  border-bottom: 1px solid #27272a;
+  background-color: transparent !important; /* Xóa màu nền cố định, dùng màu của body */
+  color: inherit !important; 
+  border-bottom: none; /* Bỏ viền để liền mạch hơn */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 /* Tùy chỉnh nút bấm (Button) nổi bật tại Hero Section */
 .hero--primary .button--secondary {
   background-color: var(--ifm-color-primary) !important;
-  color: #000000 !important; /* Chữ đen trên nền xanh lá giúp dễ đọc nhất */
-  border: none !important;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  color: #ffffff !important; /* Light Mode: Chữ trắng trên nền xanh */
+  border: 1px solid transparent !important;
+  font-weight: 500;
+  border-radius: 6px; /* Bo góc mềm mại hơn */
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode: Nút bấm */
+[data-theme='dark'] .hero--primary .button--secondary {
+  color: #121212 !important; /* Dark mode: Chữ đen trên nền xanh dịu */
 }
 
 /* Hiệu ứng tương tác khi di chuột vào nút bấm */
 .hero--primary .button--secondary:hover {
-  background-color: var(--ifm-color-primary-light) !important;
-  transform: translateY(-2px); /* Hiệu ứng nhấc lên nhẹ nhàng */
-  box-shadow: 0 4px 12px rgba(0, 214, 95, 0.3);
+  background-color: var(--ifm-color-primary-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Căn chỉnh Logo gọn gàng */

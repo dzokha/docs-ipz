@@ -102,31 +102,34 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Tài liệu',
               to: '/docs/intro',
             },
+            {to: '/blog', label: 'Tin tức'},
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Facebook',
+              href: 'https://facebook.com/ipz.vn',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Youtube',
+              href: 'https://youtube.com/@ipz-vn',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Website',
+              href: 'https://ipz.vn',
             },
           ],
         },
         {
           title: 'Liên hệ',
           items: [
+            { label: 'IPZ Digital Solutions', href: 'https://ipz.vn' },
+            { label: 'Cái Nước, Cà Mau, Việt Nam'},
             { label: 'Email: info@ipz.vn', href: 'mailto:info@ipz.vn' }, 
           ],
         },

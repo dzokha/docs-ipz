@@ -99,10 +99,10 @@ const config: Config = {
           label: 'Giải pháp & Nghiên cứu', // Vừa học thuật vừa mang tính ứng dụng
           position: 'left',
           items: [
-            { label: 'An ninh mạng Chuyên sâu', to: '/cybersecurity/intro' },
-            { label: 'Giải pháp Sở hữu Trí tuệ', to: '/intellectual-prop/intro' },
-            { label: 'Chiến lược Thương hiệu Số', to: '/branding/intro' },
-            { label: 'Công nghệ Tin sinh học', to: '/bioinformatics/intro' },
+            { label: 'An ninh mạng Chuyên sâu', to: '/cyberintro' },
+            { label: 'Giải pháp Sở hữu Trí tuệ', to: '/ip/intro' },
+            { label: 'Chiến lược Thương hiệu Số', to: '/brand/intro' },
+            { label: 'Công nghệ Tin sinh học', to: '/bio/intro' },
           ],
         },
         {

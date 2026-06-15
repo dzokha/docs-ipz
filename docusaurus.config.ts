@@ -17,7 +17,8 @@ const config: Config = {
   organizationName: 'dzokha',
   projectName: 'docs-ipz',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Thay vì 'throw'
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'vi',

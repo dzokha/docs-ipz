@@ -11,29 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Trải nghiệm Người dùng Tối ưu',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Nghiên cứu & Giải pháp Chuyên sâu',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default, // Có thể đổi thành icon về DNA/Shield sau
     description: (
       <>
-        Cấu trúc được thiết kế tinh gọn và trực quan, giúp người dùng tiếp cận thông tin kỹ thuật một cách nhanh chóng và liền mạch.
+        Nơi hệ thống hóa và công bố các công trình R&D cốt lõi về <b>Tin sinh học (Bioinformatics)</b> và <b>An ninh mạng Chuyên sâu</b>. Chúng tôi chuyển hóa lý thuyết toán tin phức tạp thành các giải pháp công nghệ có khả năng ứng dụng thực tế cao.
       </>
     ),
   },
   {
-    title: 'Tập trung vào Giá trị Nội dung',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Tài sản Trí tuệ & Chiến lược Số',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default, // Có thể đổi thành icon về Patent/Brand sau
     description: (
       <>
-        Chúng tôi tối ưu hóa quy trình quản lý tri thức, cho phép bạn dành trọn nguồn lực vào việc phát triển nội dung và giải pháp thay vì loay hoay với hạ tầng.
+        Khai thác giá trị thương mại từ dữ liệu lớn thông qua phân tích <b>Báo cáo Sáng chế (Patents)</b> và bảo hộ <b>Sở hữu Trí tuệ</b>. Từ đó, định hình và tư vấn chiến lược xây dựng thương hiệu số bền vững cho tổ chức.
       </>
     ),
   },
   {
-    title: 'Nền tảng Công nghệ Tiên tiến',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Hệ sinh thái Tri thức Mở',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default, // Có thể đổi thành icon về Open Source/Community sau
     description: (
       <>
-        Vận hành trên nền tảng React hiện đại, hỗ trợ khả năng tùy biến linh hoạt và sẵn sàng mở rộng quy mô hệ thống theo tốc độ tăng trưởng của sản phẩm.
+        Hiện thực hóa sứ mệnh "Chuyển hóa dữ liệu thành giá trị" thông qua việc chia sẻ các gói thư viện mã nguồn mở <b>(Python Packages)</b>, kho tài nguyên kỹ thuật dùng chung và chuỗi ấn phẩm khoa học phi lợi nhuận cho cộng đồng.
       </>
     ),
   },

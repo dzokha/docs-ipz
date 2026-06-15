@@ -98,10 +98,10 @@ const config: Config = {
           label: 'Giải pháp & Nghiên cứu', // Vừa học thuật vừa mang tính ứng dụng
           position: 'left',
           items: [
-            { label: 'An ninh mạng', to: '/cybersecurity/intro' },
-            { label: 'Sở hữu trí tuệ', to: '/intellectual-prop/intro' },
-            { label: 'Thương hiệu', to: '/branding/intro' },
-            { label: 'Tin sinh học', to: '/bioinformatics/intro' },
+            { label: 'An ninh mạng Chuyên sâu', to: '/cybersecurity/intro' },
+            { label: 'Giải pháp Sở hữu Trí tuệ', to: '/intellectual-prop/intro' },
+            { label: 'Chiến lược Thương hiệu Số', to: '/branding/intro' },
+            { label: 'Công nghệ Tin sinh học', to: '/bioinformatics/intro' },
           ],
         },
         {
@@ -109,9 +109,12 @@ const config: Config = {
           label: 'Công bố & Ấn phẩm', 
           position: 'left',
           items: [
-            { label: 'Tất cả bài viết', to: '/blog' },
-            { label: 'Nghiên cứu Tin sinh', to: '/blog/tags/bioinformatics' },
+            { label: 'Tất cả Ấn phẩm', to: '/blog' },
             { label: 'Báo cáo An ninh mạng', to: '/blog/tags/cybersecurity' },
+            { label: 'Chiến lược Thương hiệu', to: '/blog/tags/brand' },
+            { label: 'Phân tích Sáng chế & IP', to: '/blog/tags/patent' },
+            { label: 'Nghiên cứu Tin sinh học', to: '/blog/tags/bioinformatics' },
+            
           ],
         },
       ],

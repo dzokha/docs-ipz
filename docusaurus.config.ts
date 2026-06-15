@@ -2,34 +2,23 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'IPZ Digital Solutions',
   tagline: 'Chuyển hóa dữ liệu thành giá trị',
   favicon: 'img/ipz.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://docs.ipz.vn',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'dzokha', // Usually your GitHub org/user name.
-  projectName: 'docs-ipz', // Usually your repo name.
+  organizationName: 'dzokha',
+  projectName: 'docs-ipz',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi'],
@@ -41,10 +30,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/dzokha/docs-ipz/tree/main/',
+          editUrl: 'https://github.com/dzokha/docs-ipz/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -52,11 +38,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/dzokha/docs-ipz/tree/main/',
-          // Useful options to enforce blogging best practices
+          editUrl: 'https://github.com/dzokha/docs-ipz/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -68,30 +50,69 @@ const config: Config = {
     ],
   ],
 
+  // Cấu trúc plugins đúng: là một mảng nằm ngoài presets và ở mức root
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'cybersecurity',
+        path: 'cybersecurity',
+        routeBasePath: 'cybersecurity',
+        sidebarPath: './sidebarsCyber.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bioinformatics',
+        path: 'bioinformatics',
+        routeBasePath: 'bioinformatics',
+        sidebarPath: './sidebarsBio.ts',
+      },
+    ],
+  ],
+
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'IPZ Digital',
+      title: 'IPZ Docs',
       logo: {
         alt: 'IPZ Digital Logo',
         src: 'img/ipz.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'dropdown',
+          label: 'Tài nguyên Mở', // Thể hiện tinh thần chia sẻ với cộng đồng
           position: 'left',
-          label: 'Tài liệu',
+          items: [
+            { label: 'tcpfeature', to: '/software/python' },
+            { label: 'ids-ac', to: '/software/github' },
+          ],
         },
-        {to: '/blog', label: 'Sự kiện', position: 'left'},
         {
-          href: 'https://ipz.vn',
-          label: 'Trang chủ IPZ',
-          position: 'right',
+          type: 'dropdown',
+          label: 'Giải pháp & Nghiên cứu', // Vừa học thuật vừa mang tính ứng dụng
+          position: 'left',
+          items: [
+            { label: 'An ninh mạng', to: '/cybersecurity/intro' },
+            { label: 'Sở hữu trí tuệ', to: '/intellectual-prop/intro' },
+            { label: 'Thương hiệu', to: '/branding/intro' },
+            { label: 'Tin sinh học', to: '/bioinformatics/intro' },
+          ],
+        },
+        {
+          type: 'dropdown', // Biến Blog thành nơi phân loại bài viết công bố
+          label: 'Công bố & Ấn phẩm', 
+          position: 'left',
+          items: [
+            { label: 'Tất cả bài viết', to: '/blog' },
+            { label: 'Nghiên cứu Tin sinh', to: '/blog/tags/bioinformatics' },
+            { label: 'Báo cáo An ninh mạng', to: '/blog/tags/cybersecurity' },
+          ],
         },
       ],
     },
@@ -101,36 +122,25 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Tài liệu',
-              to: '/docs/intro',
-            },
-            {to: '/blog', label: 'Sự kiện'},
+            { label: 'Tài nguyên Mở', to: '/docs/intro' },
+            { label: 'Giải pháp & Nghiên cứu', to: '/blog' },
+            { label: 'Công bố & Ấn phẩm', to: '/blog' },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Facebook',
-              href: 'https://facebook.com/ipz.vn',
-            },
-            {
-              label: 'Youtube',
-              href: 'https://youtube.com/@ipz-vn',
-            },
-            {
-              label: 'Website',
-              href: 'https://ipz.vn',
-            },
+            { label: 'Facebook', href: 'https://facebook.com/ipz.vn' },
+            { label: 'Youtube', href: 'https://youtube.com/@ipz-vn' },
+            { label: 'Website', href: 'https://ipz.vn' },
           ],
         },
         {
           title: 'Liên hệ',
           items: [
             { label: 'IPZ Digital Solutions', href: 'https://ipz.vn' },
-            { label: 'Cái Nước, Cà Mau, Việt Nam', href: 'https://maps.app.goo.gl/kKMTGoRxBH1CLGbz9'},
-            { label: 'Email: info@ipz.vn', href: 'mailto:info@ipz.vn' }, 
+            { label: 'Cái Nước, Cà Mau, Việt Nam', href: 'https://maps.app.goo.gl/kKMTGoRxBH1CLGbz9' },
+            { label: 'Email: info@ipz.vn', href: 'mailto:info@ipz.vn' },
           ],
         },
       ],

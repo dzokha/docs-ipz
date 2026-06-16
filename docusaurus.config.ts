@@ -56,19 +56,46 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'cybersecurity',
-        path: 'cybersecurity',
-        routeBasePath: 'cybersecurity',
+        id: 'cyber',
+        path: 'cyber',
+        routeBasePath: 'cyber',
         sidebarPath: './sidebarsCyber.ts',
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'bioinformatics',
-        path: 'bioinformatics',
-        routeBasePath: 'bioinformatics',
+        id: 'ip',
+        path: 'ip',
+        routeBasePath: 'ip',
+        sidebarPath: './sidebarsIP.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'brand',
+        path: 'brand',
+        routeBasePath: 'brand',
+        sidebarPath: './sidebarsBrand.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bio',
+        path: 'bio',
+        routeBasePath: 'bio',
         sidebarPath: './sidebarsBio.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'soft', // Định danh duy nhất
+        path: 'soft', // Tên thư mục chứa nội dung
+        routeBasePath: 'soft', // Đường dẫn URL sẽ là /soft
+        sidebarPath: './sidebarsSoft.ts', // Đường dẫn file sidebar
       },
     ],
   ],
@@ -86,37 +113,38 @@ const config: Config = {
       },
       items: [
         {
-          type: 'dropdown',
-          label: 'Tài nguyên Mở', // Thể hiện tinh thần chia sẻ với cộng đồng
+          label: 'Công cụ', // Thể hiện tinh thần chia sẻ với cộng đồng
+          to: '/soft/intro',
           position: 'left',
-          items: [
-            { label: 'tcpfeature', to: '/software/python' },
-            { label: 'ids-ac', to: '/software/github' },
-          ],
         },
         {
           type: 'dropdown',
-          label: 'Giải pháp & Nghiên cứu', // Vừa học thuật vừa mang tính ứng dụng
+          label: 'Giải pháp số', // Vừa học thuật vừa mang tính ứng dụng
           position: 'left',
           items: [
-            { label: 'An ninh mạng Chuyên sâu', to: '/cyber/intro' },
-            { label: 'Giải pháp Sở hữu Trí tuệ', to: '/ip/intro' },
-            { label: 'Chiến lược Thương hiệu Số', to: '/brand/intro' },
-            { label: 'Công nghệ Tin sinh học', to: '/bio/intro' },
+            { label: 'Bảo mật & An ninh mạng', to: '/cyber/intro' },
+            { label: 'Bảo hộ Sở hữu trí tuệ', to: '/ip/intro' },
+            { label: 'Phát triển Thương hiệu', to: '/brand/intro' },
+            { label: 'Ứng dụng Tin sinh học', to: '/bio/intro' },
           ],
         },
         {
           type: 'dropdown', // Biến Blog thành nơi phân loại bài viết công bố
-          label: 'Công bố & Ấn phẩm', 
+          label: 'Truyền thông & Blog', 
           position: 'left',
           items: [
-            { label: 'Tất cả Ấn phẩm', to: '/blog' },
-            { label: 'Báo cáo An ninh mạng', to: '/blog/tags/cybersecurity' },
-            { label: 'Chiến lược Thương hiệu', to: '/blog/tags/brand' },
-            { label: 'Phân tích Sáng chế & IP', to: '/blog/tags/patent' },
-            { label: 'Nghiên cứu Tin sinh học', to: '/blog/tags/bioinformatics' },
+            { label: 'Tất cả tài liệu chia sẻ', to: '/blog' },
+            { label: 'Kinh nghiệm Bảo mật mạng', to: '/blog/tags/cybersecurity' },
+            { label: 'Giải pháp Thương hiệu', to: '/blog/tags/brand' },
+            { label: 'Tư vấn Sáng chế & IP', to: '/blog/tags/patent' },
+            { label: 'Kiến thức Tin sinh học', to: '/blog/tags/bioinformatics' },
             
           ],
+        },
+        {
+          href: 'https://ipz.vn',
+          label: 'Liên hệ Dịch vụ',
+          position: 'right',
         },
       ],
     },
@@ -124,23 +152,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Hệ thống Tri thức',
           items: [
-            { label: 'Tài nguyên Mở', to: '/docs/intro' },
-            { label: 'Giải pháp & Nghiên cứu', to: '/blog' },
-            { label: 'Công bố & Ấn phẩm', to: '/blog' },
+            { label: 'Tài nguyên công nghệ', to: '/soft/intro' },
+            { label: 'Giải pháp doanh nghiệp', to: '/cyber/intro' },
+            { label: 'Cẩm nang chia sẻ', to: '/blog' },
           ],
         },
         {
-          title: 'Community',
+          title: 'Cộng đồng',
           items: [
-            { label: 'Facebook', href: 'https://facebook.com/ipz.vn' },
-            { label: 'Youtube', href: 'https://youtube.com/@ipz-vn' },
-            { label: 'Website', href: 'https://ipz.vn' },
+            { label: 'Facebook kết nối', href: 'https://facebook.com/ipz.vn' },
+            { label: 'Kênh Youtube chia sẻ', href: 'https://youtube.com/@ipz-vn' },
+            { label: 'Website chính thức', href: 'https://ipz.vn' },
           ],
         },
         {
-          title: 'Liên hệ',
+          title: 'Văn phòng Hỗ trợ',
           items: [
             { label: 'IPZ Digital Solutions', href: 'https://ipz.vn' },
             { label: 'Cái Nước, Cà Mau, Việt Nam', href: 'https://maps.app.goo.gl/kKMTGoRxBH1CLGbz9' },

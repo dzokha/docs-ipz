@@ -8,7 +8,7 @@ const sidebars: SidebarsConfig = {
   bioSidebar: [
     {
       type: 'category',
-      label: 'Tin sinh học',
+      label: 'Ứng dụng Tin sinh học',
       collapsed: false,
       items: [
         {

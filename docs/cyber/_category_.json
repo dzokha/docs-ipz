@@ -1,0 +1,9 @@
+{
+  "label": "Bảo mật & An ninh mạng",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/cyber",
+    "description": "Đây là nơi chứa các tài liệu tổng quan về bảo mật và an ninh mạng của chúng tôi."
+  }
+}

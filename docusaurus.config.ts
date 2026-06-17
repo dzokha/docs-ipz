@@ -25,11 +25,18 @@ const config: Config = {
     locales: ['vi'],
   },
 
+  markdown: {
+    format: 'mdx',
+    mermaid: true,
+  },
+
   presets: [
     [
       'classic',
       {
         docs: {
+          path: 'docs', // Đảm bảo bạn đã di chuyển tất cả folder vào thư mục 'docs'
+          routeBasePath: '/', // URL sẽ là /soft/intro thay vì /docs/soft/intro
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/dzokha/docs-ipz/tree/main/',
         },
@@ -51,44 +58,7 @@ const config: Config = {
     ],
   ],
 
-  // Cấu trúc plugins đúng: là một mảng nằm ngoài presets và ở mức root
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'cyber',
-        path: 'cyber',
-        routeBasePath: 'cyber',
-        sidebarPath: './sidebarsCyber.ts',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'ip',
-        path: 'ip',
-        routeBasePath: 'ip',
-        sidebarPath: './sidebarsIP.ts',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'brand',
-        path: 'brand',
-        routeBasePath: 'brand',
-        sidebarPath: './sidebarsBrand.ts',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'bio',
-        path: 'bio',
-        routeBasePath: 'bio',
-        sidebarPath: './sidebarsBio.ts',
-      },
-    ],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -119,13 +89,29 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Giải pháp số', // Vừa học thuật vừa mang tính ứng dụng
+          label: 'Giải pháp số',
           position: 'left',
           items: [
-            { label: 'Bảo mật & An ninh mạng', to: '/cyber/intro' },
-            { label: 'Bảo hộ Sở hữu trí tuệ', to: '/ip/intro' },
-            { label: 'Phát triển Thương hiệu', to: '/brand/intro' },
-            { label: 'Ứng dụng Tin sinh học', to: '/bio/intro' },
+            { 
+              type: 'docSidebar', 
+              sidebarId: 'cyberSidebar', 
+              label: 'Bảo mật & An ninh mạng' 
+            },
+            { 
+              type: 'docSidebar', 
+              sidebarId: 'ipSidebar', 
+              label: 'Bảo hộ Sở hữu trí tuệ' 
+            },
+            { 
+              type: 'docSidebar', 
+              sidebarId: 'brandSidebar', 
+              label: 'Phát triển Thương hiệu' 
+            },
+            { 
+              type: 'docSidebar', 
+              sidebarId: 'bioSidebar', 
+              label: 'Ứng dụng Tin sinh học' 
+            },
           ],
         },
         {

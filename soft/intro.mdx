@@ -1,47 +1,87 @@
 ---
 sidebar_position: 1
+title: Công cụ & Tài nguyên
+description: Tổng quan về hệ sinh thái công cụ kỹ thuật và giải pháp an ninh mạng từ IPZ Digital Solutions.
 ---
 
-# Tutorial Intro
+import { FaTerminal, FaShieldAlt, FaRocket, FaNetworkWired, FaUserSecret } from 'react-icons/fa';
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# Công cụ & Tài nguyên
 
-## Getting Started
+Chào mừng đến với hệ sinh thái kỹ thuật của **IPZ Digital Solutions**. Trang này cung cấp tài liệu hướng dẫn và thông tin về bộ công cụ nghiên cứu, giải pháp bảo mật và khung ứng dụng mà chúng tôi phát triển nhằm phục vụ mục đích nghiên cứu học thuật và triển khai thực tế.
 
-Get started by **creating a new site**.
+---
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## <FaNetworkWired size={20} /> tcpfeature
+**Giải pháp trích xuất đặc trưng mạng tốc độ cao**
 
-### What you'll need
+`tcpfeature` là công cụ cốt lõi được xây dựng bằng Cython, liên kết trực tiếp với kiến trúc `libpcap/Npcap` để đạt hiệu suất tối đa. Đây là thư viện không thể thiếu cho các nhà nghiên cứu trong lĩnh vực Machine Learning và An ninh mạng.
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Đặc điểm nổi bật
+* **Hiệu suất:** Phân tích packet ở tầng bộ nhớ, loại bỏ overhead của Python.
+* **ML-Ready:** Hỗ trợ xuất dữ liệu theo chuẩn các benchmark mạng phổ biến.
+* **Đa nền tảng:** Hỗ trợ Windows (AMD64), Linux (x86_64) và macOS (Apple Silicon).
+* **Linh hoạt:** Hỗ trợ cả chế độ phân tích file Offline (PCAP) và Live capture.
 
-## Generate a new site
+:::tip Sử dụng cho Nghiên cứu
+Dự án DARPA29F và các nghiên cứu về HNET3A đã được tích hợp sẵn. Vui lòng trích dẫn bài báo gốc khi sử dụng cho mục đích học thuật: *“A Novel Approach for Data Collection and Network Attack Warning” (KSE 2019).*
+:::
 
-Generate a new Docusaurus site using the **classic template**.
+---
 
-The classic template will automatically be added to your project after you run the command:
+## <FaShieldAlt size={20} /> LensIPZ (Sentinel)
+**Phần mở rộng trình duyệt (Browser Extension) nhận diện Phishing**
+
+`Sentinel` là giải pháp bảo mật Client-side giúp nâng cao nhận thức an ninh mạng thông qua cơ chế phát hiện lừa đảo (phishing) có thể giải thích được (explainable).
+
+### Triết lý thiết kế
+* **Privacy First:** Dữ liệu không bao giờ rời khỏi trình duyệt. Không thu thập lịch sử, không theo dõi người dùng.
+* **Minh bạch:** Cung cấp lý do cụ thể tại sao một website bị đánh giá là rủi ro thay vì chỉ cảnh báo đơn thuần.
+* **Client-Side:** Phân tích hoàn toàn cục bộ, không phụ thuộc vào backend server.
+
+**Quy trình phân tích 7 chỉ số (7-Point Indicator System):**
+1. Domain Analysis | 2. URL & Link | 3. SSL/TLS | 4. Form | 5. Content | 6. DOM Structure | 7. Language/Keyword.
+
+---
+
+## <FaRocket size={20} /> PhageIPZ
+**Khung ứng dụng Full-stack thế hệ mới**
+
+`PhageIPZ` là nền tảng tích hợp backend (Spring Boot) và frontend (React + Vite) được đóng gói tối ưu bằng Docker, phục vụ cho các hệ thống ứng dụng phức tạp và khả năng mở rộng nhanh.
+
+### Triển khai nhanh
+Dự án được thiết kế để tự động hóa quy trình CI/CD cơ bản:
 
 ```bash
-npm init docusaurus@latest my-website classic
+# Build Docker Image
+docker build -t dzokha/phageipz:v1 .
+
+# Khởi chạy instance
+docker run -d \
+  -p 2026:2026 \
+  -v $(pwd)/my_soap_data:/app/data \
+  --name phageipz_instance \
+  dzokha/phageipz:v1
+
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## <FaUserSecret size={20} /> IDS-AC
+**Hệ thống phát hiện xâm nhập chủ động**
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+`ids-ac` là module chuyên biệt trong hệ sinh thái SDN-FlexShield, tập trung vào khả năng phát hiện các hành vi bất thường trong kiến trúc mạng Honeywall.
 
-## Start your site
+:::info Đang phát triển
+Tài liệu kỹ thuật chi tiết và API reference sẽ được bổ sung trong bản cập nhật kế tiếp.
+:::
 
-Run the development server:
+---
 
-```bash
-cd my-website
-npm run start
-```
+## Liên hệ & Hỗ trợ
+Tất cả các công cụ trên đều được phát triển bởi **dzokha** và đội ngũ IPZ Digital.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+* **Email:** info@ipz.vn
+* **GitHub:** [github.com/dzokha](https://github.com/dzokha)
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+:::warning Lưu ý về bản quyền
+Các thư viện nhị phân (Binary wheels) của `tcpfeature` thuộc *Custom Proprietary Academic License*. Nghiêm cấm các mục đích thương mại mà không có giấy phép riêng từ tác giả.
+:::

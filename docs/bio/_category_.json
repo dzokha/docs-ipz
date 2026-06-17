@@ -1,0 +1,9 @@
+{
+  "label": "Ứng dụng Tin sinh học",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/bio",
+    "description": "Đây là nơi chứa các tài liệu tổng quan về bảo mật và an ninh mạng của chúng tôi."
+  }
+}

@@ -129,7 +129,7 @@ const config: Config = {
         },
         {
           href: 'https://ipz.vn',
-          label: 'Liên hệ Dịch vụ',
+          label: 'Liên hệ IPZ',
           position: 'right',
         },
       ],
@@ -141,7 +141,7 @@ const config: Config = {
           title: 'Hệ thống Tri thức',
           items: [
             { label: 'Tài nguyên công nghệ', to: '/soft/intro' },
-            { label: 'Giải pháp doanh nghiệp', to: '/cyber/intro' },
+            { label: 'Giải pháp số', to: '/cyber' },
             { label: 'Cẩm nang chia sẻ', to: '/blog' },
           ],
         },

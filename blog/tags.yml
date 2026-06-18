@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
+cyber:
+  label: Cybersecurity
+  permalink: /cybersecurity
   description: Facebook tag description
 
-hello:
-  label: Hello
-  permalink: /hello
+brand:
+  label: Brand
+  permalink: /brand
   description: Hello tag description
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
+patent:
+  label: Patent
+  permalink: /patent
   description: Docusaurus tag description
 
-hola:
-  label: Hola
-  permalink: /hola
+bio:
+  label: Bioinformatics
+  permalink: /bioinformatics
   description: Hola tag description

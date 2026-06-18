@@ -1,20 +1,45 @@
 /**
  * IPZ Digital Solutions - Global CSS
- * Tối ưu hóa cho giao diện Expert & Tinh gọn (Đã chỉnh sửa độ hài hòa)
+ * Tối ưu hóa cho giao diện Expert & Tinh gọn (Đã chỉnh sửa sang Emerald Green)
+ */
+/**
+ * BỔ SUNG VÀO ĐỂ ĐỒNG BỘ TYPOGRAPHY VỚI TRANG CHÍNH IPZ.VN
  */
 
+/* 1. Ép tất cả tiêu đề trong trang Docs phải dày và có độ giãn chữ premium */
+h1, h2, h3, h4 {
+  font-weight: 700 !important; /* Dày dặn như trang chính */
+  letter-spacing: -0.02em !important;
+  color: #0F172A; /* Khớp với màu --text-main bên trang chính */
+}
+
+/* Tiêu đề lớn nhất ở giữa trang chủ Docs (IPZ Digital Solutions) */
+.hero__title {
+  font-size: 3rem !important; /* Phóng to lên cho uy lực */
+  font-weight: 800 !important; /* Siêu đậm bám theo phong cách trang chính */
+}
+
+/* 2. Đồng bộ nút bấm "Khám phá Tài liệu" với nút "Khám phá giải pháp" */
+.hero--primary .button--secondary {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600 !important; /* Tăng từ 500 lên 600 cho chữ nét hơn */
+  border-radius: 8px !important; /* Sửa từ 6px thành 8px để khớp với .btn-primary */
+  padding: 14px 32px !important; /* Sửa sang px để kích thước nút bấm bằng chằn chặn trang chính */
+  font-size: 1rem !important;
+}
+
 :root {
-  /* Màu chủ đạo (Brand Green) - Chỉnh dịu xuống một chút cho Light Mode */
-  --ifm-color-primary: #00c657; 
-  --ifm-color-primary-dark: #00aa4c;
-  --ifm-color-primary-darker: #009642;
-  --ifm-color-primary-darkest: #007a36;
-  --ifm-color-primary-light: #1ce06e;
-  --ifm-color-primary-lighter: #35f284;
-  --ifm-color-primary-lightest: #68f8a5;
+  /* Màu chủ đạo (Brand Green - Emerald Đậm) - Giúp Light Mode sang trọng và uy tín */
+  --ifm-color-primary: #059669;
+  --ifm-color-primary-dark: #04875e;
+  --ifm-color-primary-darker: #047f59;
+  --ifm-color-primary-darkest: #03694a;
+  --ifm-color-primary-light: #06a574;
+  --ifm-color-primary-lighter: #07ad7a;
+  --ifm-color-primary-lightest: #08c48b;
   
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 198, 87, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(5, 150, 105, 0.1);
   
   /* Font chữ mượt mà và hiện đại hơn */
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
@@ -27,11 +52,12 @@
 
 /* Chế độ Dark Mode */
 [data-theme='dark'] {
-  --ifm-background-color: #121212; /* Màu đen chuẩn Material Design, dịu mắt hơn #18181B */
+  --ifm-background-color: #121212; /* Màu đen chuẩn Material Design, dịu mắt hơn */
   --ifm-navbar-background-color: #18181B; /* Navbar giữ màu tối hơn chút để phân lớp */
   --ifm-footer-background-color: #18181B; /* Footer đồng màu với Navbar */
   
-  /* Trong Dark Mode, dùng màu xanh ngọc (Teal) pha chút lá cây để giảm chói */
+  /* Trong Dark Mode, dùng tone Emerald sáng hơn 1 tone (#10b981) để đảm bảo độ tương phản (WCAG), 
+     đồng thời giữ màu bạn thích (#059669) làm tone nhấn đổ bóng (dark variant) */
   --ifm-color-primary: #10b981; 
   --ifm-color-primary-dark: #059669;
   --ifm-color-primary-darker: #047857;
@@ -55,13 +81,13 @@
 /* Tùy chỉnh nút bấm (Button) nổi bật tại Hero Section */
 .hero--primary .button--secondary {
   background-color: var(--ifm-color-primary) !important;
-  color: #ffffff !important; /* Light Mode: Chữ trắng trên nền xanh */
+  color: #ffffff !important; /* Light Mode: Chữ trắng trên nền xanh đậm */
   border: 1px solid transparent !important;
   font-weight: 500;
   border-radius: 6px; /* Bo góc mềm mại hơn */
   padding: 0.75rem 1.5rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
 }
 
 /* Dark Mode: Nút bấm */
@@ -73,7 +99,7 @@
 .hero--primary .button--secondary:hover {
   background-color: var(--ifm-color-primary-dark) !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
 }
 
 /* Căn chỉnh Logo gọn gàng */
